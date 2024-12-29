@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa;
+}
+
+/* Puzzle Grid Styling */
+.puzzle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 200px); /* Increased cell size to 200x200px */
+    grid-template-rows: repeat(3, 200px);
+    gap: 5px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.puzzle-grid-drop {
+    width: 200px; /* Match the grid cell size */
+    height: 200px;
+    background-color: #ffffff;
+    border: 2px dashed #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.puzzle-grid-drop img {
+    width: 100%; /* Ensure images fit within the grid */
+    height: 100%;
+    object-fit: cover;
+}
