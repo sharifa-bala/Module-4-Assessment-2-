@@ -11,7 +11,7 @@ body {
 /* Puzzle Grid Styling */
 .puzzle-grid {
     display: grid;
-    grid-template-columns: repeat(3, 200px); /* Increased cell size to 200x200px */
+    grid-template-columns: repeat(3, 200px); /* Cell size 200px x 200px */
     grid-template-rows: repeat(3, 200px);
     gap: 5px;
     background-color: #f0f0f0;
@@ -21,17 +21,19 @@ body {
 }
 
 .puzzle-grid-drop {
-    width: 200px; /* Match the grid cell size */
+    width: 200px; /* Cell size 200px x 200px */
     height: 200px;
     background-color: #ffffff;
     border: 2px dashed #ddd;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .puzzle-grid-drop img {
-    width: 100%; /* Ensure images fit within the grid */
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* Ensure the image fits inside the grid */
+    height: 100%; /* Fill the grid cell height */
+    object-fit: contain; /* Maintain the aspect ratio without cutting or stretching */
+    pointer-events: none; /* Prevent the image from interfering with drag events */
 }
